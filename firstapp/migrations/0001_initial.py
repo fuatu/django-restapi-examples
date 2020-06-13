@@ -12,11 +12,11 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Employees',
+            name='Student',
             fields=[
                 ('id', models.IntegerField(primary_key=True, serialize=False)),
                 ('name', models.CharField(max_length=20)),
-                ('salary', models.DecimalField(decimal_places=2, max_digits=10)),
+                ('score', models.DecimalField(decimal_places=2, max_digits=10)),
             ],
         ),
     ]

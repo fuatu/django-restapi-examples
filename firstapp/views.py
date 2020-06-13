@@ -9,14 +9,6 @@ from rest_framework.response import Response
 
 # Using functions for views
 # Create your views here.
-def employee_view(request):
-    emps = Employees.objects.all()
-    response = {
-        'employees': list(emps.values('id','name','salary'))
-    }
-    return JsonResponse(response)
-
-# Create your views here.
 @api_view(['GET', 'POST'])
 def student_list(request):
     if request.method == 'GET':
