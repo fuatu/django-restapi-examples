@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'thirdapp',
     'fourthapp',
     'fifthapp',
+    'sixthapp',
 ]
 
 MIDDLEWARE = [
@@ -75,7 +76,10 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'djrest.wsgi.application'
 
-
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 3
+}
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
