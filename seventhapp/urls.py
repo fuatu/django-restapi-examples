@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
+from rest_framework.authtoken import views
 
 from seventhapp.views import EmployeeViewSet
 
@@ -23,4 +24,5 @@ router.register('employees', EmployeeViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('api-token-auth/', views.obtain_auth_token),
 ]

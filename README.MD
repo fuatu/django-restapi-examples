@@ -25,5 +25,10 @@ $ python manage.py runserver
   http://localhost:8000/fifthapp/students/
 - this example has nested serializers. Check serializer.py  
   http://localhost:8000/sixthapp/
-- django restapi basic authentication with djangomodelpermissions
-  http://localhost:8000/seventhapp/
+- django restapi basic authentication, tokenauthentication with djangomodelpermissions  
+  http://localhost:8000/seventhapp/  
+- sample curl code for getting details with token
+```zsh
+$ curl --location --request GET 'http://localhost:8000/seventhapp/employees/' \
+--header 'Authorization: Token sampletokenstring' 
+```

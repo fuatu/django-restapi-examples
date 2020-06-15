@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'fifthapp',
     'sixthapp',
     'seventhapp',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
