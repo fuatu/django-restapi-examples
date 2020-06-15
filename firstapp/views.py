@@ -3,7 +3,7 @@ from django.shortcuts import render
 from rest_framework import status
 from rest_framework.decorators import api_view
 
-from firstapp.models import Employees, Student
+from firstapp.models import Student
 from firstapp.serializers import StudentSerializer
 from rest_framework.response import Response
 

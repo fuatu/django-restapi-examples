@@ -25,3 +25,5 @@ $ python manage.py runserver
   http://localhost:8000/fifthapp/students/
 - this example has nested serializers. Check serializer.py  
   http://localhost:8000/sixthapp/
+- django restapi basic authentication with djangomodelpermissions
+  http://localhost:8000/seventhapp/
