@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.documentation import include_docs_urls
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,5 +29,9 @@ urlpatterns = [
     path('fifthapp/', include('fifthapp.urls')),
     path('sixthapp/', include('sixthapp.urls')),
     path('seventhapp/', include('seventhapp.urls')),
+    path('fileupload/', include('fileupload.urls')),
     path('api-docs/', include_docs_urls(title='Rest API', description="All api details here")),
 ]
+
+if settings.DEBUG:
+  urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

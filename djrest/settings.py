@@ -25,7 +25,7 @@ SECRET_KEY = '6uc@3d)rkidv&16poxv=5bl-b!&a$ig^8cd4--^bff+tk+9t!2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'sixthapp',
     'seventhapp',
     'rest_framework.authtoken',
+    'fileupload',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -56,7 +58,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+
+CORS_ORIGIN_ALLOW_ALL =  True
 
 ROOT_URLCONF = 'djrest.urls'
 
@@ -133,3 +138,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")

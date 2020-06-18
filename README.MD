@@ -32,3 +32,8 @@ $ python manage.py runserver
 $ curl --location --request GET 'http://localhost:8000/seventhapp/employees/' \
 --header 'Authorization: Token sampletokenstring' 
 ```
+- Added corapi doc support  
+  http://localhost:8000/sixthapp/api-docs/
+- Added cors allow all and image upload
+  http://localhost:8000/fileupload/
+  
