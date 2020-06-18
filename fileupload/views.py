@@ -10,8 +10,11 @@ from rest_framework import generics
 
 # Create your views here.
 
-class FileUploadView(generics.CreateAPIView):
+class FileUploadView(generics.ListCreateAPIView):
     parser_classes = [MultiPartParser]
     serializer_class = FileSerializer
     queryset = File.objects.all()
 
+class FileUploadDetailView(generics.RetrieveDestroyAPIView):
+    serializer_class = FileSerializer
+    queryset = File.objects.all()
