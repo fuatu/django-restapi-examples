@@ -27,11 +27,8 @@ $ python manage.py runserver
   http://localhost:8000/sixthapp/
 - django restapi basic authentication, tokenauthentication with djangomodelpermissions  
   http://localhost:8000/seventhapp/  
-- sample curl code for getting details with token
-```zsh
-$ curl --location --request GET 'http://localhost:8000/seventhapp/employees/' \
---header 'Authorization: Token sampletokenstring' 
-```
+- sample curl code for getting details with token, check url below
+  http://127.0.0.1:8000/api-docs/#seventhapp-api-token-auth-create
 - Added corapi doc support  
   http://localhost:8000/sixthapp/api-docs/
 - Added cors allow all and image upload
