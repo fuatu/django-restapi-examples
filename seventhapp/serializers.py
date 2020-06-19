@@ -8,6 +8,6 @@ class EmployeeSerializer(serializers.ModelSerializer):
 
 
 class NoModelSerializer(serializers.Serializer):
-    name = serializers.CharField(max_length=20, allow_blank=True)
+    name = serializers.CharField(max_length=20, required=False)
     token = serializers.CharField(max_length=20)
     score = serializers.DecimalField(max_digits=4,decimal_places=2)
