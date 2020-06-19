@@ -17,7 +17,7 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from rest_framework.authtoken import views
 
-from seventhapp.views import EmployeeViewSet, check_token
+from seventhapp.views import EmployeeViewSet, check_token, NoModelView
 
 router = DefaultRouter()
 router.register('employees', EmployeeViewSet)
@@ -25,5 +25,6 @@ router.register('employees', EmployeeViewSet)
 urlpatterns = [
     path('', include(router.urls)),
     path('api-token-auth/', views.obtain_auth_token),
-    path('check_token/', check_token)
+    path('check_token/', check_token),
+    path('no_model/', NoModelView.as_view()),
 ]

@@ -27,6 +27,7 @@ $ python manage.py runserver
   http://localhost:8000/sixthapp/
 - django restapi basic authentication, tokenauthentication with djangomodelpermissions  
   also added tokencheck  
+  also an example without any model  
   http://localhost:8000/seventhapp/  
 - Added cors allow all and image upload  
   http://localhost:8000/fileupload/
