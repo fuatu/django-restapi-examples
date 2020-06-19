@@ -26,11 +26,10 @@ $ python manage.py runserver
 - this example has nested serializers. Check serializer.py  
   http://localhost:8000/sixthapp/
 - django restapi basic authentication, tokenauthentication with djangomodelpermissions  
+  also added tokencheck  
   http://localhost:8000/seventhapp/  
-- sample curl code for getting details with token, check url below
-  http://127.0.0.1:8000/api-docs/#seventhapp-api-token-auth-create
-- Added corapi doc support  
-  http://localhost:8000/sixthapp/api-docs/
-- Added cors allow all and image upload
+- Added cors allow all and image upload  
   http://localhost:8000/fileupload/
+- Added corapi doc support - check this to find all api documentation  
+  http://localhost:8000/sixthapp/api-docs/
   
