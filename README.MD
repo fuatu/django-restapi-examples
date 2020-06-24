@@ -26,8 +26,9 @@ $ python manage.py runserver
 - this example has nested serializers. Check serializer.py  
   http://localhost:8000/sixthapp/
 - django restapi basic authentication, tokenauthentication with djangomodelpermissions  
-  also added tokencheck  
-  also an example without any model  
+  added tokencheck  
+  an example without any model  
+  added id and name search for employee  
   http://localhost:8000/seventhapp/  
 - Added cors allow all and image upload  
   http://localhost:8000/fileupload/

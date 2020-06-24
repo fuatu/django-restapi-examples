@@ -50,10 +50,6 @@ class EmployeeViewSet(viewsets.ModelViewSet):
         return queryset
 
 
-
-
-
-
 @api_view(['GET', ])
 @authentication_classes([TokenAuthentication,])
 @permission_classes([IsAuthenticated,])
