@@ -11,6 +11,7 @@ def validate_file_extension(value):
 
 # Create your models here.
 class File(models.Model):
+    name = models.CharField(max_length=20, blank=True)
     file = models.FileField(blank=False, null=False, validators=[validate_file_extension])
     def __str__(self):
         return self.file.name

@@ -6,16 +6,52 @@ from rest_framework.permissions import IsAuthenticated, DjangoModelPermissions
 from rest_framework.decorators import api_view, authentication_classes, permission_classes
 from rest_framework.response import Response
 from rest_framework import status
+from django.utils.datastructures import MultiValueDictKeyError
 
 # this example for basic authentication
 # uses is authenticated and also django model permissions - class level
 # for global level go to settings.py and set DEFAULT_AUTHENTICATION_CLASSES, DEFAULT_PERMISSION_CLASSES
 # Create your views here.
 class EmployeeViewSet(viewsets.ModelViewSet):
+    """
+    list:
+    for list you can use also id and name for search
+
+    **examples**
+
+    - /seventhapp/employees/?id=1
+    - /seventhapp/employees/?name=aaa
+    - /seventhapp/employees/?id=1&name=aaa
+
+    """
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
     authentication_classes = [BasicAuthentication,TokenAuthentication]
     permission_classes = [IsAuthenticated, DjangoModelPermissions]
+
+    def get_queryset(self):
+        queryset = self.queryset
+        if not self.request.query_params:
+            return queryset
+        # for id
+        try:
+            id = self.request.query_params['id']
+        except MultiValueDictKeyError:
+            id = ""
+        # for name
+        try:
+            name = self.request.query_params['name']
+        except MultiValueDictKeyError:
+            name = ""
+        if id:
+            queryset = queryset.filter(id=id)
+        if name:
+            queryset = queryset.filter(name=name)
+        return queryset
+
+
+
+
 
 
 @api_view(['GET', ])
