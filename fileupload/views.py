@@ -13,6 +13,8 @@ class FileUploadView(generics.ListCreateAPIView):
     serializer_class = FileSerializer
     queryset = File.objects.all()
 
+
+
 class FileUploadDetailView(generics.RetrieveDestroyAPIView):
     serializer_class = FileSerializer
     queryset = File.objects.all()

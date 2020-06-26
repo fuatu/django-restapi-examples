@@ -33,5 +33,6 @@ $ python manage.py runserver
 - Added cors allow all and image upload  
   http://localhost:8000/fileupload/
 - Added corapi doc support - check this to find all api documentation  
+  Added group as a slugfield  
   http://localhost:8000/sixthapp/api-docs/
   

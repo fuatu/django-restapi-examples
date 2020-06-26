@@ -1,3 +1,4 @@
+from django.contrib.auth.models import Group
 from django.db import models
 
 
@@ -13,5 +14,6 @@ def validate_file_extension(value):
 class File(models.Model):
     name = models.CharField(max_length=20, blank=True)
     file = models.FileField(blank=False, null=False, validators=[validate_file_extension])
+    groups = models.ManyToManyField(Group)
     def __str__(self):
         return self.file.name
