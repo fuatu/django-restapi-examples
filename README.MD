@@ -1,5 +1,8 @@
 # install virtualenvironment and python 
 check the video [here](https://www.youtube.com/watch?v=w9SlNyMZGiI&list=PLb84syw_FhMFGlDVYFIusJHxRstXUbNSO&index=1)
+# Heroku link here 
+https://djrestapp.herokuapp.com/api-docs/ 
+
 # Install requirements
 ```bash
 $ pip install -r requirements

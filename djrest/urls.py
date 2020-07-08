@@ -18,7 +18,7 @@ from django.urls import path, include
 from rest_framework.documentation import include_docs_urls
 from django.conf.urls.static import static
 from django.conf import settings
-
+from django.shortcuts import redirect
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,6 +30,7 @@ urlpatterns = [
     path('sixthapp/', include('sixthapp.urls')),
     path('seventhapp/', include('seventhapp.urls')),
     path('fileupload/', include('fileupload.urls')),
+    path('', lambda request: redirect('api-docs/', permanent=False)),
     path('api-docs/', include_docs_urls(title='Rest API', description="All api details here")),
 ]
 
