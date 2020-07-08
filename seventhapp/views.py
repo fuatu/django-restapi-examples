@@ -14,14 +14,14 @@ from django.utils.datastructures import MultiValueDictKeyError
 # Create your views here.
 class EmployeeViewSet(viewsets.ModelViewSet):
     """
-    list:
-    for list you can use also id and name for search
+        list:
+        for list you can use also id and name for search
 
-    **examples**
+        **examples**
 
-    - /seventhapp/employees/?id=1
-    - /seventhapp/employees/?name=aaa
-    - /seventhapp/employees/?id=1&name=aaa
+        - /seventhapp/employees/?id=1
+        - /seventhapp/employees/?name=aaa
+        - /seventhapp/employees/?id=1&name=aaa
 
     """
     queryset = Employee.objects.all()
@@ -60,6 +60,10 @@ def check_token(request):
 
 
 class NoModelView(generics.GenericAPIView):
+    """
+    create:
+    dssddssd
+    """
     serializer_class = NoModelSerializer
     def post(self, request):
         serializer = NoModelSerializer(data=request.data)
