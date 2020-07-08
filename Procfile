@@ -1,1 +1,1 @@
-web: gunicorn djheroku.wsgi --log-file -
+web: gunicorn djrest.wsgi --log-file -
